@@ -1,0 +1,337 @@
+@charset "UTF-8";
+.dark {
+  background: #010816;
+  foreground: #f7f9fb;
+  muted: #1e293b;
+  muted-foreground: #94a3b7;
+  popover: #010816;
+  popover-foreground: #f7f9fb;
+  card: #010816;
+  card-foreground: #f7f9fb;
+  border: #1e293b;
+  input: #1e293b;
+  primary: #3b82f5;
+  primary-foreground: #0f172a;
+  secondary: #1e293b;
+  secondary-foreground: #f7f9fb;
+  accent: #1e293b;
+  accent-foreground: #f7f9fb;
+  destructive: #7f1d1d;
+  destructive-foreground: #f7f9fb;
+  ring: #1d4dd7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* fallback for old browsers */
+  margin: 0;
+  padding: 0;
+  background: #010816;
+  background-repeat: no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+  width: 100%;
+  background-color: rgba(4, 8, 54, 0.368627451);
+}
+
+.navbar {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 100%;
+}
+.navbar-brand {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  background: linear-gradient(to top, #ffffff 45%, #00bfff 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Cinzel;
+  font-weight: 700;
+  font-style: normal;
+}
+.navbar-brand span {
+  margin-left: -5.5px;
+}
+.navbar-brand .style-2 {
+  font-family: "Cinzel Decorative", system-ui;
+  margin: 0;
+}
+.navbar-nav .nav-link.active {
+  color: #00c0ff;
+}
+.navbar-nav .nav-link {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.navbar-nav .nav-link:hover {
+  color: #00c0ff;
+}
+.navbar-nav .nav-link span {
+  font-size: 16px;
+  margin-left: 5px;
+}
+.navbar-toggler {
+  border-color: #1e293b;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.navbar-toggler:active {
+  border-color: #1e293b;
+}
+.navbar-toggler i {
+  color: #fff;
+  font-size: 18px;
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
+.navbar-nav {
+  gap: 15px;
+}
+.navbar .cv {
+  background-color: #1e293b;
+  color: #00c0ff;
+}
+.navbar .cv:hover {
+  background-color: #010816;
+  color: #00c0ff;
+  border-color: #1e293b;
+}
+
+.hideMenuMobile {
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.btn-outline {
+  background-color: #010816;
+  color: #009acc;
+  border-color: #1e293b;
+}
+.btn-outline:hover {
+  background-color: #1e293b;
+  color: #00c0ff;
+}
+
+#home {
+  position: relative;
+  margin: 0;
+  background-color: rgba(4, 8, 54, 0.368627451);
+  justify-content: center;
+  align-items: center;
+}
+#home img {
+  width: 402px;
+  height: 413px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+#home h2 {
+  color: #00c0ff;
+  font-family: "Sirin Stencil", system-ui;
+}
+#home p {
+  color: #bfbfbf;
+}
+
+.home {
+  gap: 10px;
+  position: relative;
+  z-index: 9;
+}
+.home hr {
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+#about {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#about h2 {
+  width: 75%;
+  margin: 0 auto;
+}
+#about .cards {
+  border: 1px solid #1e293b;
+  background-color: inherit;
+  width: 75%;
+  border: none;
+}
+#about .card {
+  background-color: inherit;
+  border: 1px solid #1e293b;
+}
+#about .row {
+  justify-content: center;
+  align-items: stretch;
+  height: -3%;
+}
+#about li {
+  display: flex;
+  align-items: stretch;
+}
+#about li article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 10px;
+  min-height: 275px;
+  flex-grow: 2;
+}
+#about article.card {
+  height: 100%;
+  flex-grow: 2;
+}
+#about h3 {
+  font-weight: normal;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#about .title {
+  color: #fff;
+  font-family: "Sirin Stencil", system-ui;
+  font-size: 20px;
+}
+#about .school {
+  color: #009acc;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+#about p {
+  color: #bfbfbf;
+  width: 75%;
+}
+#about .description {
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* Lorsque le fond masqué est actif */
+@keyframes hideMenu {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100%;
+  }
+}
+@media all and (max-width: 1200px) and (min-width: 767px) {
+  #about .cards,
+  #about p {
+    width: 90%;
+  }
+}
+@media all and (max-width: 767px) {
+  .navbar-nav {
+    height: 100vh;
+  }
+  .navbar-brand {
+    font-size: 20px;
+  }
+  .cv {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+  .slide-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    background-color: #010816;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease;
+    z-index: 2080; /* Assurez-vous que le menu soit au-dessus */
+  }
+  /* Lorsque le menu est visible */
+  .slide-menu.show {
+    right: 0;
+  }
+  .slide-menu.hide {
+    animation: hideMenu 0.5s ease forwards;
+  }
+  .hideMenuMobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    align-self: end;
+    color: #fff;
+    margin: 0;
+  }
+  #home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  #home img {
+    width: 263px;
+    height: 341px;
+    border-radius: 0%;
+  }
+  #home h2 {
+    font-size: 25px;
+  }
+  #home .home {
+    width: 250px;
+  }
+  #about {
+    padding-top: 50px;
+  }
+  #about .row {
+    gap: 10px;
+  }
+  #about .cards,
+  #about p {
+    width: 95%;
+  }
+  #about li {
+    padding: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

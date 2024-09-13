@@ -1,0 +1,54 @@
+$primary-color: #00c0ff;
+$secondary-color: #010816;
+$tertiary-color: #fff;
+$quaternary-color: rgba(0, 192, 255, 0.1);
+$border: #1e293b;
+$primary-color-darkend: darken($primary-color, 10%);
+$tertiary-color-darkend: darken($tertiary-color, 25%);
+$gradient-body: linear-gradient(to left, #111a3b, #0e1530, #040836);
+$bg-header: #0408365e;
+
+.dark {
+  background: #010816;
+  foreground: #f7f9fb;
+  muted: #1e293b;
+  muted-foreground: #94a3b7;
+  popover: #010816;
+  popover-foreground: #f7f9fb;
+  card: #010816;
+  card-foreground: #f7f9fb;
+  border: #1e293b;
+  input: #1e293b;
+  primary: #3b82f5;
+  primary-foreground: #0f172a;
+  secondary: #1e293b;
+  secondary-foreground: #f7f9fb;
+  accent: #1e293b;
+  accent-foreground: #f7f9fb;
+  destructive: #7f1d1d;
+  destructive-foreground: #f7f9fb;
+  ring: #1d4dd7;
+}
+$text-gradient-styles: (
+  background: linear-gradient(to top, #ffffff 45%, #00bfff 60%),
+  -webkit-background-clip: text,
+  -webkit-text-fill-color: transparent,
+  font-family: "Cinzel",
+  font-weight: 700,
+  font-style: normal,
+);
+
+@mixin flexbox(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $gap: 0,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}

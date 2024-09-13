@@ -1,0 +1,295 @@
+@import "config";
+* {
+  box-sizing: border-box;
+}
+body {
+  /* fallback for old browsers */
+  margin: 0;
+  padding: 0;
+  background: $secondary-color;
+  background-repeat: no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+header {
+  width: 100%;
+  background-color: $bg-header;
+}
+.navbar {
+  padding: 10px;
+  @include flexbox(row, space-between, center, 0, wrap);
+
+  width: 100%;
+  &-brand {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    @each $property, $value in $text-gradient-styles {
+      #{$property}: #{$value};
+    }
+    span {
+      margin-left: -5.5px;
+    }
+    .style-2 {
+      font-family: "Cinzel Decorative", system-ui;
+      margin: 0;
+    }
+  }
+
+  &-nav .nav-link.active {
+    color: $primary-color;
+  }
+  &-nav .nav-link {
+    color: $tertiary-color;
+    display: flex;
+    align-items: center;
+    &:hover {
+      color: $primary-color;
+    }
+    span {
+      font-size: 16px;
+      margin-left: 5px;
+    }
+  }
+  &-toggler {
+    border-color: $border;
+    @include flexbox(row, center, center, 0, wrap);
+    &:active {
+      border-color: $border;
+    }
+    i {
+      color: $tertiary-color;
+      font-size: 18px;
+    }
+  }
+  &-collapse {
+    flex-grow: 0;
+  }
+  &-nav {
+    gap: 15px;
+  }
+  .cv {
+    background-color: $border;
+    color: $primary-color;
+    &:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+      border-color: $border;
+    }
+  }
+}
+
+.hideMenuMobile {
+  display: none;
+}
+section {
+  min-height: 100vh;
+}
+.btn-outline {
+  background-color: $secondary-color;
+  color: $primary-color-darkend;
+  border-color: $border;
+  &:hover {
+    background-color: $border;
+    color: $primary-color;
+  }
+}
+#home {
+  position: relative;
+  margin: 0;
+  background-color: $bg-header;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 402px;
+    height: 413px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  h2 {
+    color: $primary-color;
+    font-family: "Sirin Stencil", system-ui;
+    // font-size: 40px;
+  }
+  p {
+    color: $tertiary-color-darkend;
+  }
+}
+.home {
+  gap: 10px;
+  position: relative;
+  z-index: 9;
+  hr {
+    width: 35px;
+    height: 2px;
+    background-color: $tertiary-color;
+  }
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+#about {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  h2 {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .cards {
+    border: 1px solid $border;
+    background-color: inherit;
+    width: 75%;
+    border: none;
+  }
+  .card {
+    background-color: inherit;
+    border: 1px solid $border;
+  }
+  .row {
+    justify-content: center;
+    align-items: stretch;
+    height: -3%;
+  }
+  li {
+    display: flex;
+    align-items: stretch;
+  }
+  li article {
+    @include flexbox(column, space-between, start, 10px, nowrap);
+    min-height: 275px;
+    flex-grow: 2;
+  }
+
+  article.card {
+    height: 100%;
+    flex-grow: 2;
+  }
+  h3 {
+    font-weight: normal;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    color: $tertiary-color;
+    font-family: "Sirin Stencil", system-ui;
+    font-size: 20px;
+  }
+
+  .school {
+    color: $primary-color-darkend;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  p {
+    color: $tertiary-color-darkend;
+    width: 75%;
+  }
+  .description {
+    // min-height: 160px;
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+/* Lorsque le fond masqué est actif */
+@keyframes hideMenu {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100%;
+  }
+}
+@media all and (max-width: 1200px) and (min-width: 767px) {
+  #about {
+    .cards,
+    p {
+      width: 90%;
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .navbar-nav {
+    height: 100vh;
+  }
+  .navbar-brand {
+    font-size: 20px;
+  }
+  .cv {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+
+  .slide-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    background-color: $secondary-color;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease;
+    z-index: 2080; /* Assurez-vous que le menu soit au-dessus */
+  }
+
+  /* Lorsque le menu est visible */
+  .slide-menu.show {
+    right: 0;
+  }
+  .slide-menu.hide {
+    animation: hideMenu 0.5s ease forwards;
+  }
+
+  .hideMenuMobile {
+    @include flexbox(row, space-between, center, 0, wrap);
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    align-self: end;
+    color: $tertiary-color;
+    margin: 0;
+  }
+  #home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    img {
+      width: 263px;
+      height: 341px;
+      border-radius: 0%;
+    }
+    h2 {
+      font-size: 25px;
+    }
+    .home {
+      width: 250px;
+    }
+  }
+  #about {
+    padding-top: 50px;
+    .row {
+      gap: 10px;
+    }
+    .cards,
+    p {
+      width: 95%;
+    }
+    li {
+      padding: 0;
+    }
+  }
+}
