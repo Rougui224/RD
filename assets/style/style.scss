@@ -92,6 +92,10 @@ section {
     color: $primary-color;
   }
 }
+h2 {
+  color: $primary-color;
+  font-family: "Sirin Stencil", system-ui;
+}
 #home {
   position: relative;
   margin: 0;
@@ -105,11 +109,6 @@ section {
     border-radius: 50%;
   }
 
-  h2 {
-    color: $primary-color;
-    font-family: "Sirin Stencil", system-ui;
-    // font-size: 40px;
-  }
   p {
     color: $tertiary-color-darkend;
   }
@@ -135,33 +134,40 @@ section {
   height: 100%;
   z-index: 3;
 }
-#about {
+
+p {
+  color: $tertiary-color-darkend;
+  width: 75%;
+}
+.cards {
+  width: 75%;
+}
+.card {
+  background-color: inherit;
+  border: 1px solid $border;
+}
+
+li {
+  display: flex;
+  align-items: stretch;
+}
+#about,
+#skills,
+#portfolio {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  h2 {
-    width: 75%;
-    margin: 0 auto;
-  }
-  .cards {
-    border: 1px solid $border;
-    background-color: inherit;
-    width: 75%;
-    border: none;
-  }
-  .card {
-    background-color: inherit;
-    border: 1px solid $border;
-  }
+}
+
+#about {
   .row {
     justify-content: center;
-    align-items: stretch;
     height: -3%;
+    gap: 10px;
   }
   li {
-    display: flex;
-    align-items: stretch;
+    flex-grow: 1;
   }
   li article {
     @include flexbox(column, space-between, start, 10px, nowrap);
@@ -183,7 +189,7 @@ section {
 
   .title {
     color: $tertiary-color;
-    font-family: "Sirin Stencil", system-ui;
+    font-family: "roboto";
     font-size: 20px;
   }
 
@@ -193,14 +199,54 @@ section {
     text-decoration: none;
     cursor: pointer;
   }
-  p {
-    color: $tertiary-color-darkend;
-    width: 75%;
-  }
+
   .description {
-    // min-height: 160px;
     flex-grow: 1;
     width: 100%;
+  }
+}
+#skills {
+  background-color: $bg-header;
+  .row {
+    gap: 10px;
+    height: auto;
+  }
+  .card {
+    box-shadow: none;
+    padding: 10px;
+    @include flexbox(column, center, start, 10px, nowrap);
+  }
+  h3 {
+    color: $tertiary-color;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  li {
+    background-color: $bg-card;
+    padding-top: 16px;
+    flex-grow: 1;
+    p {
+      width: 100%;
+      flex-grow: 1;
+    }
+  }
+}
+#portfolio {
+  ul {
+    gap: 10px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  li {
+    // width: 300px;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 /* Lorsque le fond masqué est actif */
@@ -208,6 +254,7 @@ section {
   from {
     right: 0;
   }
+
   to {
     right: -100%;
   }
@@ -215,6 +262,13 @@ section {
 @media all and (max-width: 1200px) and (min-width: 767px) {
   #about {
     .cards,
+    p {
+      width: 90%;
+    }
+  }
+  #skills,
+  #portfolio {
+    ul,
     p {
       width: 90%;
     }
@@ -272,15 +326,12 @@ section {
       height: 341px;
       border-radius: 0%;
     }
-    h2 {
-      font-size: 25px;
-    }
+
     .home {
-      width: 250px;
+      width: 260px;
     }
   }
   #about {
-    padding-top: 50px;
     .row {
       gap: 10px;
     }
@@ -291,5 +342,47 @@ section {
     li {
       padding: 0;
     }
+  }
+  #skills {
+    margin: 50px 0;
+    padding-bottom: 50px;
+    ul {
+      width: 95%;
+    }
+    p {
+      width: 95%;
+    }
+  }
+  #portfolio {
+    ul {
+      width: 95%;
+    }
+    p {
+      width: 95%;
+    }
+  }
+  #about,
+  #skills,
+  #portfolio {
+    padding-top: 50px;
+  }
+  #home p,
+  #about p,
+  #skills p {
+    font-size: 14px;
+  }
+  #home h2,
+  #about h2,
+  #skills h2 {
+    font-size: 23px;
+  }
+  #home h3,
+  #about .title,
+  #skills h3 {
+    font-size: 18px;
+  }
+  #home a,
+  #about .school {
+    font-size: 14px;
   }
 }

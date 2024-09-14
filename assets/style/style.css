@@ -131,6 +131,11 @@ section {
   color: #00c0ff;
 }
 
+h2 {
+  color: #00c0ff;
+  font-family: "Sirin Stencil", system-ui;
+}
+
 #home {
   position: relative;
   margin: 0;
@@ -144,10 +149,6 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-}
-#home h2 {
-  color: #00c0ff;
-  font-family: "Sirin Stencil", system-ui;
 }
 #home p {
   color: #bfbfbf;
@@ -175,34 +176,41 @@ section {
   z-index: 3;
 }
 
-#about {
+p {
+  color: #bfbfbf;
+  width: 75%;
+}
+
+.cards {
+  width: 75%;
+}
+
+.card {
+  background-color: inherit;
+  border: 1px solid #1e293b;
+}
+
+li {
+  display: flex;
+  align-items: stretch;
+}
+
+#about,
+#skills,
+#portfolio {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-#about h2 {
-  width: 75%;
-  margin: 0 auto;
-}
-#about .cards {
-  border: 1px solid #1e293b;
-  background-color: inherit;
-  width: 75%;
-  border: none;
-}
-#about .card {
-  background-color: inherit;
-  border: 1px solid #1e293b;
-}
+
 #about .row {
   justify-content: center;
-  align-items: stretch;
   height: -3%;
+  gap: 10px;
 }
 #about li {
-  display: flex;
-  align-items: stretch;
+  flex-grow: 1;
 }
 #about li article {
   display: flex;
@@ -227,7 +235,7 @@ section {
 }
 #about .title {
   color: #fff;
-  font-family: "Sirin Stencil", system-ui;
+  font-family: "roboto";
   font-size: 20px;
 }
 #about .school {
@@ -236,13 +244,58 @@ section {
   text-decoration: none;
   cursor: pointer;
 }
-#about p {
-  color: #bfbfbf;
-  width: 75%;
-}
 #about .description {
   flex-grow: 1;
   width: 100%;
+}
+
+#skills {
+  background-color: rgba(4, 8, 54, 0.368627451);
+}
+#skills .row {
+  gap: 10px;
+  height: auto;
+}
+#skills .card {
+  box-shadow: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+#skills h3 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 20px;
+}
+#skills li {
+  background-color: rgba(1, 8, 22, 0.5960784314);
+  padding-top: 16px;
+  flex-grow: 1;
+}
+#skills li p {
+  width: 100%;
+  flex-grow: 1;
+}
+
+#portfolio ul {
+  gap: 10px;
+}
+#portfolio img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#portfolio li {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* Lorsque le fond masqué est actif */
@@ -257,6 +310,12 @@ section {
 @media all and (max-width: 1200px) and (min-width: 767px) {
   #about .cards,
   #about p {
+    width: 90%;
+  }
+  #skills ul,
+  #skills p,
+  #portfolio ul,
+  #portfolio p {
     width: 90%;
   }
 }
@@ -315,14 +374,8 @@ section {
     height: 341px;
     border-radius: 0%;
   }
-  #home h2 {
-    font-size: 25px;
-  }
   #home .home {
-    width: 250px;
-  }
-  #about {
-    padding-top: 50px;
+    width: 260px;
   }
   #about .row {
     gap: 10px;
@@ -333,5 +386,45 @@ section {
   }
   #about li {
     padding: 0;
+  }
+  #skills {
+    margin: 50px 0;
+    padding-bottom: 50px;
+  }
+  #skills ul {
+    width: 95%;
+  }
+  #skills p {
+    width: 95%;
+  }
+  #portfolio ul {
+    width: 95%;
+  }
+  #portfolio p {
+    width: 95%;
+  }
+  #about,
+  #skills,
+  #portfolio {
+    padding-top: 50px;
+  }
+  #home p,
+  #about p,
+  #skills p {
+    font-size: 14px;
+  }
+  #home h2,
+  #about h2,
+  #skills h2 {
+    font-size: 23px;
+  }
+  #home h3,
+  #about .title,
+  #skills h3 {
+    font-size: 18px;
+  }
+  #home a,
+  #about .school {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */
