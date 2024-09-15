@@ -15,3 +15,6 @@ $(".nav-link").each(function (_, link) {
     hideMenuMobile();
   });
 });
+const innerCopyright = $("footer .copy-right");
+const copyright = `© ${new Date().getFullYear()} Rouguiatou Diallo`;
+innerCopyright.text(copyright);

@@ -107,7 +107,10 @@
               </a>
             </li>
             <li>
-              <a class="btn btn-outline" href="#">
+              <a
+                class="btn btn-outline"
+                href="https://github.com/Rougui224?tab=repositories"
+              >
                 <i class="fa-brands fa-github"></i>
               </a>
             </li>
@@ -272,18 +275,71 @@
         <ul class="row list-inline cards">
           <li class="col-md-3 col-12">
             <img src="./assets/pictures/bank-tree.webp" alt="" />
-            <div class="d-none">
+            <div class="card-description">
               <!-- Descriptions -->
+              <h3 class="text-center">Argent-Bank</h3>
+              <p class="text-center w-100 fw-bold">
+                React , Redux-toolkit , API
+              </p>
+              <p class="w-100 text-center">
+                I use React and Redux to avoid passing props between components.
+                I also utilized an API to communicate with the backend, manage
+                login/logout functionality, and handle banking transactions.
+                <br />
+                This project requires setting up the backend locally
+              </p>
+              <div class="d-flex">
+                <a
+                  href="https://rougui224.github.io/Argent-Bank/"
+                  target="_blank"
+                  class="btn btn-outline rounded-pill"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Website
+                </a>
+                <a
+                  class="btn btn-outline rounded-pill"
+                  target="_blank"
+                  href="https://github.com/Rougui224/Argent-Bank "
+                >
+                  <i class="fa-brands fa-github"></i>
+                  Github repo
+                </a>
+              </div>
             </div>
           </li>
           <li class="col-md-3 col-12">
             <img src="./assets/pictures/Kasa-project.jpg" alt="" />
-            <div class="d-none">
+            <div class="card-description">
               <!-- Descriptions -->
-              <p></p>
-              <a href="">
-                <!-- Lien du projet -->
-              </a>
+              <h3 class="text-center">Kasa</h3>
+              <p class="text-center w-100 fw-bold">
+                React , React-DOM , DataContext - API
+              </p>
+              <p class="w-100 text-center">
+                I used React combined with React DOM and DataContext to develop
+                a peer-to-peer rental platform featuring multiple properties.
+                <br />
+                This project requires setting up the backend locally
+              </p>
+              <div class="d-flex">
+                <a
+                  href="https://rougui224.github.io/Kasa/"
+                  target="_blank"
+                  class="btn btn-outline rounded-pill"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Website
+                </a>
+                <a
+                  class="btn btn-outline rounded-pill"
+                  target="_blank"
+                  href="https://github.com/Rougui224/Kasa"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  Github repo
+                </a>
+              </div>
             </div>
           </li>
           <li class="col-md-3 col-12">
@@ -291,20 +347,98 @@
               src="./assets/pictures/photographe_bordeaux_camera.webp"
               alt=""
             />
-            <div class="d-none">
+            <div class="card-description">
               <!-- Descriptions -->
-              <p></p>
-              <a href="">
-                <!-- Lien du projet -->
-              </a>
+              <h3 class="text-center">Nina Carducci</h3>
+              <p class="text-center w-100 fw-bold">
+                SEO, Image Optimization, Meta Tags
+              </p>
+              <p class="w-100 text-center">
+                I optimize the SEO of the photographer's website. I optimized
+                images and text, using meta tags and other SEO best practices to
+                enhance the site's visibility on search engines.
+              </p>
+              <div class="d-flex">
+                <a
+                  href="https://rougui224.github.io/Optimisation-SEO/"
+                  target="_blank"
+                  class="btn btn-outline rounded-pill"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Website
+                </a>
+                <a
+                  class="btn btn-outline rounded-pill"
+                  target="_blank"
+                  href="https://github.com/Rougui224/Optimisation-SEO"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  Github repo
+                </a>
+              </div>
             </div>
           </li>
         </ul>
       </section>
-      <section id="contact">
+      <section id="contact" class="d-flex m-md-0 mt-5">
         <!-- contact -->
+        <ul class="row">
+          <li class="col-6 flex-column">
+            <article class="d-flex flex-column">
+              <span>- Let's build something together...</span>
+              <h2>Contact</h2>
+              <p class="w-100 contact-description">
+                My priority is to find an apprenticeship contract to continue my
+                studies while gaining real-world experience. However, I am also
+                open to accepting a fixed-term or permanent contract to keep
+                applying and developing my skills.
+              </p>
+            </article>
+            <hr class="w-100" />
+            <div>
+              <p class="w-100">
+                <span class="fw-bold">Phone :</span>
+                <span>+336 52 58 57 04</span>
+              </p>
+              <p class="w-100">
+                <span class="fw-bold">Email Adress :</span>
+                <span>
+                  <a href="mailto:rouguiatoubarry559@gmail.com">
+                    rouguiatoubarry559@gmail.com
+                  </a>
+                </span>
+              </p>
+              <p class="w-100">
+                <span class="fw-bold">Location :</span>
+                <span>Coligny , 45000 Orléans | France</span>
+              </p>
+            </div>
+          </li>
+          <li class="col-5">
+            <form class="p-lg-5 p-md-4 p-0 pt-5 d-flex flex-column">
+              <label for="name" class="form-label">Name :</label>
+              <input type="text" id="name" class="form-control" />
+              <label for="name" class="form-label">Mail :</label>
+              <input type="email" id="name" class="form-control" />
+              <label for="name" class="form-label">Message :</label>
+              <textarea type="text" id="name" class="form-control"></textarea>
+              <button class="btn btn-outline mx-auto rounded-pill m-md-0 mb-5">
+                Send message
+              </button>
+            </form>
+          </li>
+        </ul>
       </section>
     </main>
+    <footer class="">
+      <p class="text-center w-100 p-5">
+        Please note that I currently consider my English proficiency to be at a
+        B1 level 🌍. To ensure clarity and coherence ✏️, I have utilized
+        translation tools 🛠️ to help structure and present my portfolio
+        effectively.
+      </p>
+      <p class="copy-right text-md-end text-center w-100"></p>
+    </footer>
     <!-- Le fond masqué qui couvre le corps du site -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
