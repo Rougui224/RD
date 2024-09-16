@@ -118,7 +118,7 @@ header {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .btn-outline {
@@ -364,6 +364,7 @@ li {
 #contact article,
 #contact li {
   justify-content: center;
+  flex-grow: 1;
 }
 #contact .contact-description {
   font-size: 11px;
@@ -394,6 +395,9 @@ li {
   background-color: rgba(4, 8, 54, 0.368627451);
   border: 1px solid #1e293b;
 }
+#contact textarea {
+  max-height: 150px;
+}
 #contact button {
   margin-top: 20px;
   background-color: #009acc;
@@ -407,6 +411,10 @@ footer .copy-right {
   font-size: 16px;
   padding-right: 20px;
 }
+footer hr {
+  opacity: 1;
+  height: 1px;
+}
 
 /* Lorsque le fond masqué est actif */
 @keyframes hideMenu {
@@ -415,6 +423,14 @@ footer .copy-right {
   }
   to {
     right: -100%;
+  }
+}
+@keyframes showMenu {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0%;
   }
 }
 @media all and (max-width: 1200px) and (min-width: 767px) {
@@ -432,6 +448,9 @@ footer .copy-right {
   }
   #portfolio li {
     flex: none;
+  }
+  #contact form {
+    max-width: 250px;
   }
 }
 @media all and (max-width: 767px) {
@@ -454,12 +473,11 @@ footer .copy-right {
     padding: 10px;
     background-color: #010816;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.5s ease;
     z-index: 2080;
   }
   /* Lorsque le menu est visible */
   .slide-menu.show {
-    right: 0;
+    animation: showMenu 0.5s ease forwards;
   }
   .slide-menu.hide {
     animation: hideMenu 0.5s ease forwards;
@@ -522,23 +540,36 @@ footer .copy-right {
     flex: none;
     flex-grow: 1;
   }
+  #contact {
+    padding-bottom: 50px;
+  }
   #contact ul {
-    width: 95%;
+    width: 100%;
     padding: 0;
     margin: 0 auto;
     gap: 10px;
+    flex-direction: column;
+    justify-content: center;
   }
   #contact li {
-    min-width: 350px;
+    width: 100%;
     flex-grow: 1;
     padding: 0;
   }
+  #contact .col-6 {
+    padding: 0 2%;
+  }
   #contact form {
+    width: 100%;
     max-width: 100%;
     flex-grow: 1;
+    padding: 35px 2%;
   }
   #contact textarea {
     min-height: 150px;
+  }
+  #contact input {
+    margin-bottom: 20px;
   }
   #about,
   #skills,
