@@ -1,4 +1,5 @@
 @import "config";
+@import "animations";
 * {
   box-sizing: border-box;
 }
@@ -162,6 +163,9 @@ li {
 }
 
 #about {
+  h2 {
+    visibility: hidden;
+  }
   .row {
     justify-content: center;
     height: -3%;
@@ -174,6 +178,10 @@ li {
     @include flexbox(column, space-between, start, 10px, nowrap);
     min-height: 275px;
     flex-grow: 2;
+    transition: all 0.5s ease-out;
+    &:hover {
+      margin-top: -5px;
+    }
   }
 
   article.card {
@@ -208,6 +216,9 @@ li {
 }
 #skills {
   background-color: $bg-header;
+  h2 {
+    visibility: hidden;
+  }
   .row {
     gap: 10px;
     height: auto;
@@ -216,12 +227,9 @@ li {
     box-shadow: none;
     padding: 10px;
     @include flexbox(column, center, start, 10px, nowrap);
-    transition: all 0.3s ease-out;
+    transition: all 0.5s ease-out;
     &:hover {
-      background-color: $primary-color-darkend;
-    }
-    &:hover p {
-      color: $secondary-color;
+      margin-top: -5px;
     }
   }
   h3 {
@@ -233,13 +241,19 @@ li {
     background-color: $bg-card;
     padding-top: 16px;
     flex-grow: 1;
+    min-height: 210px;
     p {
       width: 100%;
       flex-grow: 1;
+      font-size: 14px;
     }
   }
 }
 #portfolio {
+  padding: 50px 0;
+  h2 {
+    visibility: hidden;
+  }
   ul {
     gap: 10px;
     flex-wrap: wrap;
@@ -254,7 +268,7 @@ li {
     position: relative;
     width: 330px;
     height: 329px;
-    flex: 1;
+    flex-grow: 1;
     margin: 0;
     padding: 0;
     flex-direction: column;
@@ -364,6 +378,9 @@ footer {
     height: 1px;
   }
 }
+.animate {
+  visibility: hidden;
+}
 /* Lorsque le fond masqué est actif */
 @keyframes hideMenu {
   from {
@@ -397,6 +414,9 @@ footer {
     p {
       width: 90%;
     }
+  }
+  #skills li {
+    min-height: 225px;
   }
   #portfolio {
     li {
@@ -483,6 +503,9 @@ footer {
     }
     p {
       width: 95%;
+    }
+    li {
+      min-height: 0px;
     }
   }
   #portfolio {

@@ -21,6 +21,56 @@
   ring: #1d4dd7;
 }
 
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-tl {
+  0% {
+    transform: scale(0);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-left {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+.scale-in-center {
+  animation: scale-in-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.scale-in-hor-left {
+  animation: scale-in-hor-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.scale-in-tl {
+  animation: scale-in-tl 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.visible {
+  visibility: visible;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -205,6 +255,9 @@ li {
   gap: 20px;
 }
 
+#about h2 {
+  visibility: hidden;
+}
 #about .row {
   justify-content: center;
   height: -3%;
@@ -222,6 +275,10 @@ li {
   gap: 10px;
   min-height: 275px;
   flex-grow: 2;
+  transition: all 0.5s ease-out;
+}
+#about li article:hover {
+  margin-top: -5px;
 }
 #about article.card {
   height: 100%;
@@ -253,6 +310,9 @@ li {
 #skills {
   background-color: rgba(4, 8, 54, 0.368627451);
 }
+#skills h2 {
+  visibility: hidden;
+}
 #skills .row {
   gap: 10px;
   height: auto;
@@ -266,13 +326,10 @@ li {
   align-items: start;
   flex-wrap: nowrap;
   gap: 10px;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 }
 #skills .card:hover {
-  background-color: #009acc;
-}
-#skills .card:hover p {
-  color: #010816;
+  margin-top: -5px;
 }
 #skills h3 {
   color: #fff;
@@ -283,12 +340,20 @@ li {
   background-color: rgba(1, 8, 22, 0.5960784314);
   padding-top: 16px;
   flex-grow: 1;
+  min-height: 210px;
 }
 #skills li p {
   width: 100%;
   flex-grow: 1;
+  font-size: 14px;
 }
 
+#portfolio {
+  padding: 50px 0;
+}
+#portfolio h2 {
+  visibility: hidden;
+}
 #portfolio ul {
   gap: 10px;
   flex-wrap: wrap;
@@ -304,7 +369,7 @@ li {
   position: relative;
   width: 330px;
   height: 329px;
-  flex: 1;
+  flex-grow: 1;
   margin: 0;
   padding: 0;
   flex-direction: column;
@@ -416,6 +481,10 @@ footer hr {
   height: 1px;
 }
 
+.animate {
+  visibility: hidden;
+}
+
 /* Lorsque le fond masqué est actif */
 @keyframes hideMenu {
   from {
@@ -445,6 +514,9 @@ footer hr {
   #contact ul,
   #contact p {
     width: 90%;
+  }
+  #skills li {
+    min-height: 225px;
   }
   #portfolio li {
     flex: none;
@@ -529,6 +601,9 @@ footer hr {
   }
   #skills p {
     width: 95%;
+  }
+  #skills li {
+    min-height: 0px;
   }
   #portfolio ul {
     width: 95%;
