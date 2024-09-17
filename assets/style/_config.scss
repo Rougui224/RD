@@ -10,27 +10,6 @@ $bg-header: #0408365e;
 $bg-card: #01081698;
 $bg-hover: rgb(0 154 204 / 67%);
 
-.dark {
-  background: #010816;
-  foreground: #f7f9fb;
-  muted: #1e293b;
-  muted-foreground: #94a3b7;
-  popover: #010816;
-  popover-foreground: #f7f9fb;
-  card: #010816;
-  card-foreground: #f7f9fb;
-  border: #1e293b;
-  input: #1e293b;
-  primary: #3b82f5;
-  primary-foreground: #0f172a;
-  secondary: #1e293b;
-  secondary-foreground: #f7f9fb;
-  accent: #1e293b;
-  accent-foreground: #f7f9fb;
-  destructive: #7f1d1d;
-  destructive-foreground: #f7f9fb;
-  ring: #1d4dd7;
-}
 $text-gradient-styles: (
   background: linear-gradient(to top, #ffffff 45%, #00bfff 60%),
   -webkit-background-clip: text,

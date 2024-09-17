@@ -1,3 +1,12 @@
+const animationsSkillsCards = [
+  "slide-in-tl",
+  "slide-in-top",
+  "slide-in-tr",
+  "slide-in-bl",
+  "slide-in-bottom",
+  "slide-in-br",
+];
+const animationAboutCards = ["slide-in-bl", "slide-in-br"];
 // Fonction pour gérer l'animation d'un élément
 function animateElement(element, animation, visible) {
   // Créer un observateur d'intersection avec un seuil de 1 (élément entièrement visible)
@@ -24,16 +33,13 @@ function animateElement(element, animation, visible) {
 
 // Appliquer l'animation à l'élément cible
 
-animateElement(
-  document.querySelector("#home img"),
-  "scale-in-hor-left",
-  "visible"
-);
+animateElement(document.querySelector("#home img"), "slide-in-left", "visible");
 animateElement(
   document.querySelector("#home .p-2"),
-  "scale-in-center",
+  "slide-in-right",
   "visible"
 );
+
 animateElement(
   document.querySelector("#about h2"),
   "scale-in-center",
@@ -75,13 +81,13 @@ animateElement(
   "visible"
 );
 $("#about li").each(function (index, element) {
-  animateElement(element, "scale-in-center", "visible");
+  animateElement(element, animationAboutCards[index], "visible");
 });
-$("#skills li").each(function (_, element) {
-  animateElement(element, "scale-in-center", "visible");
+$("#skills li").each(function (index, element) {
+  animateElement(element, animationsSkillsCards[index], "visible");
 });
-$("#portfolio li").each(function (_, element) {
-  animateElement(element, "scale-in-tl", "visible");
+$("#portfolio li").each(function (index, element) {
+  animateElement(element, animationsSkillsCards[index], "visible");
 });
 $("#contact li").each(function (_, element) {
   animateElement(element, "scale-in-center", "visible");
