@@ -4,11 +4,10 @@
   box-sizing: border-box;
 }
 body {
-  /* fallback for old browsers */
+  min-width: 375px;
   margin: 0;
   padding: 0;
   background: $secondary-color;
-  background-repeat: no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 header {
   width: 100%;
