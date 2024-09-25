@@ -194,13 +194,14 @@ header {
   margin-left: 5px;
 }
 .navbar-toggler {
-  border-color: #1e293b;
+  border: none;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
   gap: 0;
+  padding: 0;
 }
 .navbar-toggler:active {
   border-color: #1e293b;
@@ -277,7 +278,7 @@ h2 {
   background-color: #fff;
 }
 .home .primary {
-  background-color: #009acc;
+  background-color: #00c0ff;
   color: #010816;
 }
 
@@ -627,8 +628,8 @@ footer hr {
     align-items: center;
     flex-wrap: wrap;
     gap: 0;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 22px;
     font-size: 25px;
     align-self: end;
     color: #fff;

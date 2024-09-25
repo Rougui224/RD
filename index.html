@@ -3,6 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+  name="description"
+  content="I am a front-end developer specializing in creating dynamic and responsive websites. With solid skills in HTML, CSS, JavaScript, and React, I enjoy transforming designs into smooth and engaging user experiences. Explore my portfolio to discover my projects and achievements."
+/>
+
+<!-- Open Graph / Facebook -->
+<meta
+  property="og:title"
+  content="Rouguiatou Diallo - Front-end Developer"
+/>
+<meta
+  property="og:image"
+  content="https://rougui224.github.io/RD/assets/pictures/developpeuse_web.webp"
+/>
+<meta
+  property="og:description"
+  content="I am a front-end developer specializing in creating dynamic and responsive websites. With solid skills in HTML, CSS, JavaScript, and React, I enjoy transforming designs into smooth and engaging user experiences. Explore my portfolio to discover my projects and achievements."
+/>
+<meta property="og:site_name" content="Portfolio" />
+<meta
+  property="og:url"
+  content="https://rougui224.github.io/RD/">
+<meta property="og:type" content="website" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:image"
+  content="https://rougui224.github.io/RD/assets/pictures/developpeuse_web.webp"
+/>
+<meta
+  name="twitter:description"
+  content="I am a front-end developer specializing in creating dynamic and responsive websites. With solid skills in HTML, CSS, JavaScript, and React, I enjoy transforming designs into smooth and engaging user experiences. Explore my portfolio to discover my projects and achievements."
+/>
+<meta
+  name="twitter:url"
+  content="https://rougui224.github.io/RD/"
+/>
+
+<!-- LinkedIn -->
+<meta
+  property="og:image"
+  content="https://rougui224.github.io/RD/assets/pictures/developpeuse_web.webp"
+/>
+<meta
+  property="og:image:alt"
+  content="Rouguiatou Diallo - Front-end Developer"
+/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="./assets/pictures/favicon.webp" type="image/webp" />
@@ -20,7 +69,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./src/style/style.css" />
     <title>Rouguiatou Diallo | Web developper</title>
   </head>
 
@@ -42,13 +91,12 @@
           CV
         </a>
         <button
-          class="navbar-toggler btn btn-outline openMenu"
+          class="navbar-toggler openMenu"
           data-bs-toggle="collapse"
           data-bs-target="#responsiveMenu"
         >
-          <i class="fa-solid fa-ellipsis"></i>
-          <!-- <span class="navbar-toggler-icon"></span> -->
-        </button>
+          <i class="fa-solid fa-bars-staggered"></i>
+          <span class="visually-hidden">Toggle navigation menu</span>        </button>
         <div
           class="collapse navbar-collapse px-lg-auto mx-auto slide-menu"
           id="responsiveMenu"
@@ -99,6 +147,8 @@
           class="col-md-5 col-12 animate"
           src="./assets/pictures/developpeuse_web.webp"
           alt="developpeur web"
+          loading="eager"
+          decoding="async"
         />
         <div class="col-md-5 col-12 p-2 animate">
           <h2 class="text-md-start text-center">Front-end developper</h2>
@@ -116,18 +166,27 @@
               </a>
             </li>
             <li>
-              <a class="btn btn-outline" href="#">
-                <i class="fa-brands fa-linkedin"></i>
+              <a
+                class="btn btn-outline"
+                href="https://github.com/Rougui224?tab=repositories"
+                aria-label="Visit my GitHub profile"
+              >
+                <i class="fa-brands fa-github"></i>
+                <span class="visually-hidden">Visit my GitHub repositories</span>
               </a>
             </li>
             <li>
               <a
                 class="btn btn-outline"
-                href="https://github.com/Rougui224?tab=repositories"
+                href="https://wa.me/33652585704"
+                target="_blank"
+                aria-label="Contact me on WhatsApp"
               >
-                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="visually-hidden">Contact me on WhatsApp</span>
               </a>
             </li>
+
           </ul>
         </div>
       </section>
@@ -429,7 +488,7 @@
           </li>
           <li class="col-md-3 col-12 animate">
             <img
-              src="./assets/pictures/Kasa-project.jpg"
+              src="./assets/pictures/Kasa-project.webp"
               alt="Kasa- projet Openclassroom"
             />
             <div class="card-description">
@@ -538,7 +597,7 @@
           </li>
           <li class="col-md-3 col-12 animate">
             <img
-              src="./assets/pictures/jeu-du-pendu.png"
+              src="./assets/pictures/jeu-du-pendu.webp"
               alt="Jeu du pendu - projet Believemy"
             />
             <div class="card-description">
@@ -646,10 +705,10 @@
             <form class="p-lg-5 p-sm-4 d-flex flex-column">
               <label for="name" class="form-label">Name :</label>
               <input type="text" id="name" class="form-control" />
-              <label for="name" class="form-label">Mail :</label>
-              <input type="email" id="name" class="form-control" />
-              <label for="name" class="form-label">Message :</label>
-              <textarea type="text" id="name" class="form-control"></textarea>
+              <label for="email" class="form-label">Mail :</label>
+              <input type="email" id="email" class="form-control" />
+              <label for="message" class="form-label">Message :</label>
+              <textarea type="text" id="message" class="form-control"></textarea>
               <button class="btn btn-outline mx-auto rounded-pill">
                 Send message
               </button>
@@ -677,9 +736,28 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <script src="./assets/js/particles.js"></script>
+    <script src="./src/js/particles.js"></script>
 
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/animations.js"></script>
+    <script src="./src/js/script.js"></script>
+    <script src="./src/js/animations.js"></script>
+        <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "LocalBusiness",
+        "name": "Rouguiatou Diallo",
+        "description": "Front-end developper",
+        "image": "https://rougui224.github.io/RD/assets/pictures/developpeuse_web.webp",
+        "url": "https://rougui224.github.io/RD/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Coligny",
+          "addressLocality": "Orléans",
+          "postalCode": "45000",
+          "addressRegion": "Loiret",
+          "addressCountry": "France"
+        },
+        "telephone": "+33652585704",
+        "openingHours": "Mo-Fr 10:00-19:00"
+      }
   </body>
 </html>

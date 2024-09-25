@@ -51,8 +51,9 @@ header {
     }
   }
   &-toggler {
-    border-color: $border;
-    @include flexbox(row, center, center, 0, wrap);
+    border: none;
+    @include flexbox(row, flex-end, center, 0, wrap);
+    padding: 0;
     &:active {
       border-color: $border;
     }
@@ -124,7 +125,7 @@ h2 {
     background-color: $tertiary-color;
   }
   .primary {
-    background-color: $primary-color-darkend;
+    background-color: $primary-color;
     color: $secondary-color;
   }
 }
@@ -465,8 +466,8 @@ footer {
 
   .hideMenuMobile {
     @include flexbox(row, space-between, center, 0, wrap);
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 22px;
     font-size: 25px;
     align-self: end;
     color: $tertiary-color;
