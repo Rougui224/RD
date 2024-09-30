@@ -5,7 +5,8 @@
 }
 body {
   min-width: 375px;
-  margin: 0;
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 0;
   background: $secondary-color;
 }
@@ -182,9 +183,9 @@ li {
     @include flexbox(column, space-between, start, 10px, nowrap);
     min-height: 275px;
     flex-grow: 2;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
     &:hover {
-      margin-top: -5px;
+      transform: scale(1.01);
     }
   }
 

@@ -138,11 +138,11 @@
 }
 
 body {
-  /* fallback for old browsers */
-  margin: 0;
+  min-width: 375px;
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 0;
   background: #010816;
-  background-repeat: no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header {
@@ -342,10 +342,10 @@ li {
   gap: 10px;
   min-height: 275px;
   flex-grow: 2;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 #about li article:hover {
-  margin-top: -5px;
+  transform: scale(1.01);
 }
 #about article.card {
   height: 100%;
