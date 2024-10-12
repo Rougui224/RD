@@ -7,6 +7,7 @@ const animationsSkillsCards = [
   "slide-in-br",
 ];
 const animationAboutCards = ["slide-in-bl", "slide-in-br"];
+const animationblogCards = ["slide-in-bl", "slide-in-top", "slide-in-br"];
 // Fonction pour gérer l'animation d'un élément
 function animateElement(element, animation, visible) {
   // Créer un observateur d'intersection avec un seuil de 1 (élément entièrement visible)
@@ -41,25 +42,16 @@ animateElement(
 );
 
 animateElement(
-  document.querySelector("#about h2"),
+  document.querySelector("#resume h2"),
   "scale-in-center",
   "visible"
 );
 animateElement(
-  document.querySelector("#about p"),
+  document.querySelector("#resume p"),
   "scale-in-center",
   "visible"
 );
-animateElement(
-  document.querySelector("#skills h2"),
-  "scale-in-center",
-  "visible"
-);
-animateElement(
-  document.querySelector("#skills p"),
-  "scale-in-center",
-  "visible"
-);
+
 animateElement(
   document.querySelector("#portfolio h2"),
   "scale-in-center",
@@ -71,6 +63,12 @@ animateElement(
   "visible"
 );
 animateElement(
+  document.querySelector("#blog h2"),
+  "scale-in-center",
+  "visible"
+);
+animateElement(document.querySelector("#blog p"), "scale-in-center", "visible");
+animateElement(
   document.querySelector("footer p"),
   "scale-in-center",
   "visible"
@@ -80,14 +78,17 @@ animateElement(
   "scale-in-center",
   "visible"
 );
-$("#about li").each(function (index, element) {
+$("#resume li").each(function (index, element) {
   animateElement(element, animationAboutCards[index], "visible");
 });
-$("#skills li").each(function (index, element) {
+$(".skills li").each(function (index, element) {
   animateElement(element, animationsSkillsCards[index], "visible");
 });
 $("#portfolio li").each(function (index, element) {
   animateElement(element, animationsSkillsCards[index], "visible");
+});
+$("#blog li").each(function (index, element) {
+  animateElement(element, animationblogCards[index], "visible");
 });
 $("#contact li").each(function (_, element) {
   animateElement(element, "scale-in-center", "visible");

@@ -133,6 +133,14 @@
   visibility: visible;
 }
 
+.hidden-header {
+  top: -100px; /* Cache le header en le déplaçant hors de la vue */
+}
+
+.hidden-navbar {
+  top: 100% !important; /* Cache la navbar de la même manière */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -148,6 +156,8 @@ body {
 header {
   width: 100%;
   background-color: rgba(4, 8, 54, 0.368627451);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px); /* Applique le flou */
 }
 
 .navbar {
@@ -171,10 +181,7 @@ header {
   font-weight: 700;
   font-style: normal;
 }
-.navbar-brand span {
-  margin-left: -5.5px;
-}
-.navbar-brand .style-2 {
+.navbar-brand::first-letter {
   font-family: "Cinzel Decorative", system-ui;
   margin: 0;
 }
@@ -312,107 +319,91 @@ li {
   align-items: stretch;
 }
 
-#about,
+#resume,
 #skills,
 #portfolio,
-#contact {
+#contact,
+#blog {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
-#about h2 {
+#resume h2 {
   visibility: hidden;
 }
-#about .row {
+#resume .row {
   justify-content: center;
   height: -3%;
   gap: 10px;
 }
-#about li {
+#resume li {
   flex-grow: 1;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
-#about li article {
+#resume li article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
   flex-wrap: nowrap;
   gap: 10px;
-  min-height: 275px;
   flex-grow: 2;
   transition: all 0.3s ease-out;
 }
-#about li article:hover {
+#resume li article:hover {
   transform: scale(1.01);
 }
-#about article.card {
+#resume article.card {
   height: 100%;
   flex-grow: 2;
+  background-color: rgba(0, 11, 32, 0.4);
 }
-#about h3 {
+#resume .education,
+#resume h3 {
   font-weight: normal;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#about .title {
+#resume h3 {
+  color: #009acc;
+  margin: 40px 0 2px 0;
+}
+#resume h4 {
+  color: #bfbfbf;
+  font-size: 15px;
+}
+#resume .title {
   color: #fff;
   font-family: "roboto";
   font-size: 20px;
 }
-#about .school {
+#resume .school {
   color: #009acc;
   font-size: 16px;
   text-decoration: none;
   cursor: pointer;
 }
-#about .description {
+#resume .description {
   flex-grow: 1;
   width: 100%;
 }
-
-#skills {
-  background-color: rgba(4, 8, 54, 0.368627451);
-}
-#skills h2 {
-  visibility: hidden;
-}
-#skills .row {
-  gap: 10px;
-  height: auto;
-}
-#skills .card {
-  box-shadow: none;
-  padding: 10px;
+#resume .skills li {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: start;
-  flex-wrap: nowrap;
-  gap: 10px;
-  transition: all 0.5s ease-out;
+  gap: 5px;
+  padding: 10px;
+  background-color: rgba(0, 11, 32, 0.4);
+  transition: all 0.3s ease;
 }
-#skills .card:hover {
+#resume .skills li:hover {
   margin-top: -5px;
-}
-#skills h3 {
-  color: #fff;
-  font-weight: normal;
-  font-size: 20px;
-}
-#skills li {
-  background-color: rgba(1, 8, 22, 0.5960784314);
-  padding-top: 16px;
-  flex-grow: 1;
-  min-height: 210px;
-}
-#skills li p {
-  width: 100%;
-  flex-grow: 1;
-  font-size: 14px;
 }
 
 #portfolio {
@@ -478,6 +469,55 @@ li {
 }
 #portfolio .d-flex {
   gap: 5px;
+}
+
+#blog ul {
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto;
+}
+#blog a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  padding-top: 10px;
+  gap: 20px;
+  min-height: 280px;
+  text-decoration: none;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+#blog a:hover {
+  transform: scale(1.01);
+}
+#blog li {
+  flex-grow: 1;
+  padding: 0;
+}
+#blog .card-body {
+  background: rgba(0, 11, 32, 0.4);
+  padding: 5px 10px;
+  border-top: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+#blog h3 {
+  font-size: 14px;
+  color: #fff;
+  font-weight: normal;
+  justify-content: space-between;
+}
+#blog h4 {
+  font-size: 16px;
+  color: #009acc;
+}
+#blog span {
+  font-size: 13px;
+  color: #bfbfbf;
 }
 
 #contact {
@@ -570,20 +610,17 @@ footer hr {
   }
 }
 @media all and (max-width: 1200px) and (min-width: 767px) {
-  #about .cards,
-  #about p {
+  #resume .cards,
+  #resume p {
     width: 90%;
   }
-  #skills ul,
-  #skills p,
+  #blog ul,
+  #blog p,
   #portfolio ul,
   #portfolio p,
   #contact ul,
   #contact p {
     width: 90%;
-  }
-  #skills li {
-    min-height: 225px;
   }
   #portfolio li {
     flex: none;
@@ -649,14 +686,14 @@ footer hr {
   #home .home {
     width: 260px;
   }
-  #about .row {
+  #resume .row {
     gap: 10px;
   }
-  #about .cards,
-  #about p {
+  #resume .cards,
+  #resume p {
     width: 95%;
   }
-  #about li {
+  #resume li {
     padding: 0;
   }
   #skills {
@@ -672,13 +709,16 @@ footer hr {
   #skills li {
     min-height: 0px;
   }
-  #portfolio ul {
+  #portfolio ul,
+  #blog ul {
     width: 95%;
   }
-  #portfolio p {
+  #portfolio p,
+  #blog p {
     width: 95%;
   }
-  #portfolio li {
+  #portfolio li,
+  #blog li {
     flex: none;
     flex-grow: 1;
   }
@@ -713,31 +753,31 @@ footer hr {
   #contact input {
     margin-bottom: 20px;
   }
-  #about,
-  #skills,
+  #resume,
+  #blog,
   #portfolio,
   #contact {
     padding-top: 50px;
   }
   #home p,
-  #about p,
-  #skills p {
+  #resume p,
+  #blog p {
     font-size: 14px;
   }
   #home h2,
-  #about h2,
-  #skills h2,
+  #resume h2,
+  #blog h2,
   #contact h2 {
     font-size: 23px;
   }
   #home h3,
-  #about .title,
+  #resume .title,
   #skills h3,
   #contact h3 {
     font-size: 18px;
   }
   #home a,
-  #about .school {
+  #resume .school {
     font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */

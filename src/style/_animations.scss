@@ -161,3 +161,10 @@
 .visible {
   visibility: visible;
 }
+.hidden-header {
+  top: -100px; /* Cache le header en le déplaçant hors de la vue */
+}
+
+.hidden-navbar {
+  top: 100% !important; /* Cache la navbar de la même manière */
+}

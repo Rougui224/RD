@@ -13,6 +13,7 @@ body {
 header {
   width: 100%;
   background-color: $bg-header;
+  backdrop-filter: blur(4px); /* Applique le flou */
 }
 .navbar {
   padding: 10px;
@@ -26,10 +27,8 @@ header {
     @each $property, $value in $text-gradient-styles {
       #{$property}: #{$value};
     }
-    span {
-      margin-left: -5.5px;
-    }
-    .style-2 {
+
+    &::first-letter {
       font-family: "Cinzel Decorative", system-ui;
       margin: 0;
     }
@@ -157,17 +156,18 @@ li {
   display: flex;
   align-items: stretch;
 }
-#about,
+#resume,
 #skills,
 #portfolio,
-#contact {
+#contact,
+#blog {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
-#about {
+#resume {
   h2 {
     visibility: hidden;
   }
@@ -178,10 +178,11 @@ li {
   }
   li {
     flex-grow: 1;
+    backdrop-filter: blur(5px);
   }
   li article {
     @include flexbox(column, space-between, start, 10px, nowrap);
-    min-height: 275px;
+    // min-height: 275px;
     flex-grow: 2;
     transition: all 0.3s ease-out;
     &:hover {
@@ -192,7 +193,10 @@ li {
   article.card {
     height: 100%;
     flex-grow: 2;
+    background-color: $bg-card;
+    // border-right: 3px solid $primary-color-darkend;
   }
+  .education,
   h3 {
     font-weight: normal;
     width: 100%;
@@ -200,7 +204,14 @@ li {
     justify-content: space-between;
     align-items: center;
   }
-
+  h3 {
+    color: $primary-color-darkend;
+    margin: 40px 0 2px 0;
+  }
+  h4 {
+    color: $tertiary-color-darkend;
+    font-size: 15px;
+  }
   .title {
     color: $tertiary-color;
     font-family: "roboto";
@@ -218,42 +229,22 @@ li {
     flex-grow: 1;
     width: 100%;
   }
-}
-#skills {
-  background-color: $bg-header;
-  h2 {
-    visibility: hidden;
-  }
-  .row {
-    gap: 10px;
-    height: auto;
-  }
-  .card {
-    box-shadow: none;
+  .skills li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     padding: 10px;
-    @include flexbox(column, center, start, 10px, nowrap);
-    transition: all 0.5s ease-out;
+    background-color: $bg-card;
+    // border-left: 2px solid $primary-color-darkend;
+    transition: all 0.3s ease;
     &:hover {
       margin-top: -5px;
     }
   }
-  h3 {
-    color: $tertiary-color;
-    font-weight: normal;
-    font-size: 20px;
-  }
-  li {
-    background-color: $bg-card;
-    padding-top: 16px;
-    flex-grow: 1;
-    min-height: 210px;
-    p {
-      width: 100%;
-      flex-grow: 1;
-      font-size: 14px;
-    }
-  }
 }
+
 #portfolio {
   padding: 50px 0;
   h2 {
@@ -312,6 +303,57 @@ li {
   }
   .d-flex {
     gap: 5px;
+  }
+}
+#blog {
+  ul {
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    padding-top: 10px;
+    gap: 20px;
+    min-height: 280px;
+    text-decoration: none;
+    transition: all 300ms ease;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+  li {
+    flex-grow: 1;
+
+    padding: 0;
+  }
+  .card-body {
+    background: $bg-card;
+    padding: 5px 10px;
+    border-top: 1px solid $border;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  h3 {
+    font-size: 14px;
+    color: $tertiary-color;
+    font-weight: normal;
+    justify-content: space-between;
+  }
+  h4 {
+    font-size: 16px;
+    color: $primary-color-darkend;
+  }
+  span {
+    font-size: 13px;
+    color: $tertiary-color-darkend;
   }
 }
 #contact {
@@ -406,13 +448,13 @@ footer {
   }
 }
 @media all and (max-width: 1200px) and (min-width: 767px) {
-  #about {
+  #resume {
     .cards,
     p {
       width: 90%;
     }
   }
-  #skills,
+  #blog,
   #portfolio,
   #contact {
     ul,
@@ -420,9 +462,7 @@ footer {
       width: 90%;
     }
   }
-  #skills li {
-    min-height: 225px;
-  }
+
   #portfolio {
     li {
       flex: none;
@@ -488,7 +528,7 @@ footer {
       width: 260px;
     }
   }
-  #about {
+  #resume {
     .row {
       gap: 10px;
     }
@@ -513,7 +553,8 @@ footer {
       min-height: 0px;
     }
   }
-  #portfolio {
+  #portfolio,
+  #blog {
     ul {
       width: 95%;
     }
@@ -557,31 +598,31 @@ footer {
       margin-bottom: 20px;
     }
   }
-  #about,
-  #skills,
+  #resume,
+  #blog,
   #portfolio,
   #contact {
     padding-top: 50px;
   }
   #home p,
-  #about p,
-  #skills p {
+  #resume p,
+  #blog p {
     font-size: 14px;
   }
   #home h2,
-  #about h2,
-  #skills h2,
+  #resume h2,
+  #blog h2,
   #contact h2 {
     font-size: 23px;
   }
   #home h3,
-  #about .title,
+  #resume .title,
   #skills h3,
   #contact h3 {
     font-size: 18px;
   }
   #home a,
-  #about .school {
+  #resume .school {
     font-size: 14px;
   }
 }
