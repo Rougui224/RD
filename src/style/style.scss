@@ -368,7 +368,7 @@ li {
     height: 3px;
     color: $primary-color-darkend;
   }
-  article,
+  // article,
   li {
     justify-content: center;
     flex-grow: 1;
@@ -462,14 +462,16 @@ footer {
       width: 90%;
     }
   }
-
+  #contact .row {
+    padding-left: 0;
+  }
   #portfolio {
     li {
       flex: none;
     }
   }
   #contact form {
-    max-width: 250px;
+    max-width: 330px;
   }
 }
 @media all and (max-width: 767px) {

@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style/blog.css" />
     <!-- Meta description (160 caractères max) -->
     <meta
       name="description"
@@ -48,34 +47,1018 @@
       name="twitter:image"
       content="https://rougui224.github.io/RD/assets/pictures/methodologie-agile.webp"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      href="./../assets/pictures/favicon.webp"
+      type="image/webp"
+    />
+    <link rel="stylesheet" href="./src/style/blog.css" />
+    <link rel="stylesheet" href="./src/style/agile.css" />
 
     <title>Méthodologie Agile : Guide complet pour les développeurs</title>
   </head>
-  <body>
-    <header>
-      <!-- titre et le lien de retour -->
+  <body data-bs-spy="scroll" data-bs-target="#scrollSpy">
+    <header class="sticky-top">
+      <a href="./../index.html#blog">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span class="sr-only">Retouner à la page du portfolio</span>
+      </a>
+      <h1>Apprener à planifier vos projet avant de commencer à coder</h1>
     </header>
-    <main>
+    <main class="d-flex">
+      <nav class="navbar card" id="scrollSpy">
+        <ul class="navbar-nav list-inline">
+          <li class="nav-item">
+            <a href="#introduction-gestion-de-projet" class="nav-link">
+              Indroduction
+              <span>à la gestion de projet</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#gestion-de-projet-agile" class="nav-link">
+              Gestion de projet
+              <span>agile</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#bonnePratique" class="nav-link">
+              <span>Stratégies Efficaces:</span>
+              Bonnes Pratiques
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#conclusion" class="nav-link">conclusion</a>
+          </li>
+        </ul>
+      </nav>
       <article class="content">
+        <section class="content_introduction">
+          <h2>
+            Pourquoi planifier un projet avant de coder est-il essentiel ?
+          </h2>
+          <p>
+            Il est crucial de
+            <strong>planifier un projet avant de commencer à coder</strong>
+            pour garantir une exécution efficace et sans imprévus. Une bonne
+            planification permet de définir
+            <span>clairement les objectifs</span>
+            , les
+            <span>fonctionnalités prioritaires</span>
+            et les étapes clés du développement. Cela aide à éviter les erreurs,
+            à
+            <span>mieux gérer le temps</span>
+            , et à s'assurer que le projet répond aux attentes du client. De
+            plus, en planifiant le développement avant de coder, on
+            <span>
+              anticipe les défis techniques et optimise l'organisation du
+              travail
+            </span>
+            , ce qui est essentiel pour le succès du projet, même en tant que
+            développeur indépendant. Cette approche de planification est
+            fondamentale, quel que soit le type de gestion de projet choisi,
+            qu'il s'agisse de
+            <strong>méthodes traditionnelles, Agile, Scrum ou Lean,</strong>
+            car elle jette les bases d'un développement réussi.
+          </p>
+        </section>
         <!-- 1 - Agile ? Scrum ? cycle en V ? methodologie traditionnel ? quest ce que c'est ? et quelle est la difference ? -->
+        <section id="introduction-gestion-de-projet">
+          <div class="content_sectionHeading d-flex">
+            <h2>
+              Gestion de Projet : Agile, Scrum, Lean et Cycle en V. Comprendre
+              les Différences
+            </h2>
+            <span>
+              <i class="fa-solid fa-chevron-right rotate"></i>
+              <!-- <i class="fa-solid fa-chevron-down"></i> -->
+            </span>
+          </div>
+          <div class="content_sectionWrapper open">
+            <h3>Agile :</h3>
+            <p>
+              L’
+              <strong>Agile</strong>
+              est une manière de gérer des projets de façon
+              <span>flexible</span>
+              et
+              <span>adaptative</span>
+              . Plutôt que de tout planifier à l'avance, le projet est découpé
+              en petites étapes, appelées
+              <span>itérations</span>
+              , qui durent généralement de 1 à 4 semaines. Après chaque
+              itération, on revoit ce qui a été fait, et on peut ajuster le plan
+              en fonction des retours. Cette méthode est idéale lorsque les
+              besoins du client peuvent changer en cours de route, car elle
+              permet de
+              <span>réagir rapidement</span>
+              aux nouveaux besoins ou aux imprévus.
+            </p>
+            <h3>Scrum :</h3>
+            <p>
+              <strong>Scrum</strong>
+              est une
+              <span>méthode Agile</span>
+              qui organise le travail d'équipe en
+              <span>sprints</span>
+              (périodes courtes de 2 à 4 semaines). Chaque sprint débute par une
+              planification et se termine par une revue, avec des réunions
+              quotidiennes pour suivre l'avancement. Scrum met en avant des
+              rôles clés, comme le
+              <span>Scrum Master</span>
+              (qui assure la productivité) et le
+              <span>Product Owner</span>
+              (qui représente le client). Il est particulièrement adapté aux
+              projets complexes et aux équipes de plusieurs personnes.
+            </p>
+            <h3>Lean :</h3>
+            <p>
+              La
+              <strong>gestion de projet Lean</strong>
+              vise à
+              <span>réduire les gaspillages</span>
+              (temps, ressources) et à maximiser la valeur pour le client.
+              Inspirée du système Toyota, elle se concentre sur l'efficacité en
+              éliminant les tâches superflues, optimisant les processus, et en
+              livrant rapidement des produits de qualité.
+            </p>
+            <h3>
+              Méthodologies Traditionnelles , Cycle en V, Cycle en Cascade
+            </h3>
+            <p>
+              le
+              <strong>cycle en V et le cycle en cascade</strong>
+              sont tous deux des méthodologies traditionnelles de gestion de
+              projet.
+            </p>
+            <p>
+              <strong>Cycle en cascade (ou waterfall)</strong>
+              : Il s'agit d'un modèle linéaire où chaque phase du projet
+              (spécification, conception, développement, tests, etc.)
+              <span>
+                doit être complètement terminée avant de passer à la suivante
+              </span>
+              . Une fois qu'une étape est terminée, il est
+              <span>difficile de revenir en arrière</span>
+              pour apporter des modifications.
+            </p>
+            <p>
+              <strong>Cycle en V</strong>
+              : Il est également linéaire, mais se distingue par une corrélation
+              plus directe entre les phases de développement et les phases de
+              test.
+              <span>
+                Pour chaque phase de conception, il existe une phase de
+                validation ou de vérification correspondante
+              </span>
+              . Par exemple, la conception des spécifications est liée aux tests
+              de validation, et le développement est lié aux tests unitaires.
+              Cela donne une structure en forme de "V".
+            </p>
 
+            <p class="alert">
+              En somme,
+              <span>Agile</span>
+              est très flexible et met l'accent sur l'amélioration continue du
+              produit en fonction des retours du client, permettant des
+              ajustements rapides et fréquents, ce qui le rend idéal pour les
+              projets complexes.
+              <span>Lean</span>
+              , de son côté, optimise les processus pour livrer plus rapidement
+              en éliminant les ressources et les activités inutiles. Les
+              <span>méthodes traditionnelles</span>
+              , comme le cycle en V ou le cycle en cascade, sont plus rigides et
+              adaptées aux projets bien définis dès le départ, avec peu de place
+              pour des évolutions en cours de route.
+              <br />
+              Ces méthodes peuvent être adaptées ou combinées selon les besoins
+              spécifiques du projet et de l'organisation, permettant ainsi de
+              trouver le juste équilibre entre flexibilité, optimisation des
+              ressources et rigueur méthodologique.
+            </p>
+          </div>
+        </section>
         <!-- 2- Ici , on parle de la methologie agile en entreprise, 
 
             a - definition 
             b - la compositions , points forts 
             c - Outils 
          -->
+        <section class="content_methodologieAgile" id="gestion-de-projet-agile">
+          <div class="content_sectionHeading d-flex">
+            <h2>
+              Planifier efficacement un projet de A à Z avec la méthodologie
+              Agile
+            </h2>
+            <span>
+              <i class="fa-solid fa-chevron-right"></i>
+              <!-- <i class="fa-solid fa-chevron-down"></i> -->
+            </span>
+          </div>
+          <div class="content_sectionWrapper">
+            <p>
+              Nous avons exploré l'importance de la planification de projets
+              ainsi que les plusieurs types de gestion de projet et leurs
+              distinctions. Maintenant, nous allons nous pencher sur la
+              <strong>
+                gestion de projet en solo avec la méthodologie Agile
+              </strong>
+              , une approche largement adoptée en entreprise pour sa capacité à
+              s'adapter rapidement aux changements et à offrir une flexibilité
+              accrue.
+            </p>
+            <h3>Agilité en entreprise vs en solo</h3>
+            <p>
+              En entreprise, les ressources (équipe, outils, feedback) sont
+              souvent facilement accessibles. On te fournit un cadre, des
+              outils, et des rôles bien définis, ce qui facilite la gestion du
+              projet.Lorsque tu travailles en solo, contrairement à une équipe
+              où les tâches sont réparties, tu devras
+              <strong>gérer ton temps avec rigueur</strong>
+              . Utilise des outils simples comme un tableau Kanban (Trello,
+              Jira) pour
+              <strong>organiser et prioriser tes tâches</strong>
+              . Tes user stories et backlog doivent rester réalistes et
+              ajustables en fonction de ta progression et des imprévus
+              éventuels.
+            </p>
+            <h3>Comment structurer son travail en mode agile solo</h3>
+            <ol>
+              <li>
+                <h3>Backlog Personnel</h3>
+                <p>
+                  Commence par créer un
+                  <strong>backlog</strong>
+                  , qui est une liste de toutes les fonctionnalités que tu
+                  souhaites implémenter dans ton projet. Le backlog permet
+                  d’avoir une vision d’ensemble des besoins.
+                </p>
 
-        <!-- 3 - Comment adopter la methodologie agile quand on est seule
-            quand on a une maquete (c'est facile , il suffit juste d'appliquer la methologie agile sur la maquete )
+                <div class="content_sectionHeading d-flex">
+                  <h4>Exemple</h4>
+                  <span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </span>
+                </div>
+                <div class="content_sectionWrapper">
+                  <p>
+                    Dans le cadre d'un
+                    <span>
+                      projet fullstack où l'on doit tout construire de zéro,
+                    </span>
+                    y compris le design, le backlog doit inclure toutes les
+                    fonctionnalités essentielles ainsi que les aspects
+                    techniques et visuels du projet. Voici une vue d'ensemble de
+                    ce que tu pourrais écrire dans le backlog :
+                  </p>
+                  <h5>Conception du front-end</h5>
+                  <dl>
+                    <dt>Wireframes et maquettes</dt>
+                    <dd>
+                      Créer les esquisses pour chaque page clé (home, dashboard,
+                      blog, etc.).
+                    </dd>
 
-            quand on doit partir de Zero 
+                    <dt>Design UI</dt>
+                    <dd>
+                      Définir les styles visuels (couleurs, typographie,
+                      boutons, icônes).
+                    </dd>
 
-         la planifications du projet agile (on commence par les fonctionnalités, puis le design .... )
+                    <dt>Création de composants réutilisables</dt>
+                    <dd>
+                      Créer des cartes, des formulaires, des tableaux et
+                      d'autres éléments UI.
+                    </dd>
 
-         *********Conclusion**************  
-         -->
+                    <dt>Responsive design</dt>
+                    <dd>
+                      S'assurer que toutes les pages sont adaptées aux mobiles
+                      et tablettes.
+                    </dd>
+                  </dl>
+                  <h5>Fonctionnalités du Front-End :</h5>
+                  <dl>
+                    <dt>Navigation</dt>
+                    <dd>
+                      Implémenter une barre de navigation dynamique (visible sur
+                      desktop, responsive sur mobile).
+                    </dd>
+
+                    <dt>Gestion des utilisateurs</dt>
+                    <dd>
+                      Créer des formulaires de connexion, d'inscription, et de
+                      gestion de profil utilisateur.
+                    </dd>
+
+                    <dt>Affichage dynamique des données</dt>
+                    <dd>
+                      Lier le front-end à une API pour afficher les données de
+                      manière dynamique (par ex. le portfolio, les articles du
+                      blog).
+                    </dd>
+
+                    <dt>Animation et interactions</dt>
+                    <dd>
+                      Ajouter des effets visuels (transitions, animations
+                      lorsqu'un élément devient visible à l'écran).
+                    </dd>
+                  </dl>
+                  <h5>Conception du Back-End :</h5>
+                  <dl>
+                    <dt>API Restful</dt>
+                    <dd>
+                      Développer une API qui gère les utilisateurs, les articles
+                      de blog, les images, etc.
+                    </dd>
+
+                    <dt>Base de données</dt>
+                    <dd>
+                      Créer et structurer la base de données pour stocker les
+                      informations utilisateur, les articles de blog, les
+                      images, etc.
+                    </dd>
+
+                    <dt>Gestion des utilisateurs</dt>
+                    <dd>
+                      Implémenter des routes pour l'inscription, la connexion,
+                      la déconnexion, et la gestion de sessions utilisateurs
+                      (JWT, cookies).
+                    </dd>
+
+                    <dt>Sécurité des données</dt>
+                    <dd>
+                      Mettre en place des mesures pour sécuriser les données
+                      (authentification, validation des entrées, chiffrement des
+                      mots de passe).
+                    </dd>
+                  </dl>
+                  <h5>Fonctionnalités Back-End :</h5>
+                  <dl>
+                    <dt>CRUD articles de blog</dt>
+                    <dd>
+                      Ajouter, modifier, supprimer et afficher les articles de
+                      blog via des requêtes API.
+                    </dd>
+
+                    <dt>Téléchargement d'images</dt>
+                    <dd>
+                      Permettre le téléversement d'images pour le portfolio ou
+                      les articles.
+                    </dd>
+
+                    <dt>Suivi des utilisateurs</dt>
+                    <dd>
+                      Enregistrer les interactions des utilisateurs pour des
+                      fonctionnalités comme l'affichage des vues ou des likes
+                      sur les articles.
+                    </dd>
+
+                    <dt>Envoi de mails</dt>
+                    <dd>
+                      Mettre en place une fonctionnalité d'envoi de mails pour
+                      la confirmation d'inscription ou de contact.
+                    </dd>
+                  </dl>
+                  <h5>Test et Déploiement</h5>
+                  <dl>
+                    <dt>Tests unitaires</dt>
+                    <dd>
+                      Écrire des tests pour vérifier le bon fonctionnement des
+                      composants front-end et back-end.
+                    </dd>
+
+                    <dt>Déploiement</dt>
+                    <dd>
+                      Planifier le déploiement du site sur un hébergeur (ex.
+                      Heroku, Hostinger), avec une intégration continue.
+                    </dd>
+
+                    <dt>Monitoring</dt>
+                    <dd>
+                      Mettre en place un système de monitoring pour suivre les
+                      performances (Google Analytics, ou autre).
+                    </dd>
+                  </dl>
+                  <p>
+                    Cette structure te permet de définir toutes les tâches
+                    nécessaires pour la réussite du projet fullstack, en
+                    incluant des aspects front-end, back-end et design. Ensuite,
+                    tu peux
+                    <span>prioriser ces tâches selon l'urgence</span>
+                    ou l'importance pour ton projet.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h3>Créer des user stories</h3>
+                <p>
+                  Ensuite, pour chaque fonctionnalité dans ton backlog,
+                  <span>définis des user stories</span>
+                  . Ce sont des descriptions simples formulées du point de vue
+                  de l'utilisateur pour préciser les besoins.
+                  <br />
+                  Chaque user story suit une structure simple qui inclut :
+                </p>
+                <ul>
+                  <li>
+                    <span>Rôle</span>
+                    : Qui bénéficie de la fonctionnalité (utilisateur,
+                    administrateur, etc.) ?
+                  </li>
+                  <li>
+                    <span>Besoin</span>
+                    Quelle est la fonctionnalité souhaitée ?
+                  </li>
+                  <li>
+                    <span>But</span>
+                    : Quel est l'objectif ou le bénéfice de cette fonctionnalité
+                    ?
+                  </li>
+                </ul>
+                <div class="content_sectionHeading d-flex">
+                  <h4>Exemple</h4>
+                  <span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                  </span>
+                </div>
+                <div class="content_sectionWrapper">
+                  <dl>
+                    <dt>En tant qu'utilisateur,</dt>
+                    <dd>
+                      je veux pouvoir créer un compte afin de sauvegarder mes
+                      préférences et mes données personnelles, pour que je
+                      puisse accéder à mes informations à tout moment.
+                    </dd>
+
+                    <dt>En tant qu'utilisateur,</dt>
+                    <dd>
+                      je veux me connecter à mon compte avec mon adresse e-mail
+                      et mon mot de passe afin de sécuriser mes données et
+                      d'accéder aux fonctionnalités de l'application.
+                    </dd>
+
+                    <dt>En tant qu'utilisateur,</dt>
+                    <dd>
+                      je souhaite pouvoir visualiser une liste de mes articles
+                      préférés, pour retrouver rapidement ce qui m'intéresse.
+                    </dd>
+
+                    <dt>En tant qu'utilisateur,</dt>
+                    <dd>
+                      je veux pouvoir ajouter un nouvel article à ma liste, afin
+                      de garder une trace des contenus que je souhaite consulter
+                      plus tard.
+                    </dd>
+
+                    <dt>En tant qu'utilisateur,</dt>
+                    <dd>
+                      je souhaite pouvoir modifier mes informations de profil
+                      (comme mon nom et mon adresse e-mail) pour m'assurer que
+                      mes données sont à jour.
+                    </dd>
+
+                    <dt>En tant qu'utilisateur,</dt>
+                    <dd>
+                      je veux recevoir des notifications lorsque de nouveaux
+                      articles correspondant à mes intérêts sont publiés, pour
+                      rester informé sans avoir à chercher manuellement.
+                    </dd>
+
+                    <dt>En tant qu'administrateur,</dt>
+                    <dd>
+                      je veux pouvoir gérer les utilisateurs (ajouter, modifier,
+                      supprimer) afin de garantir un bon fonctionnement de
+                      l'application et de maintenir un environnement sûr.
+                    </dd>
+                  </dl>
+                </div>
+              </li>
+              <li>
+                <h3>Découper les tâches</h3>
+                <p>
+                  Une fois les user stories définies, décompose-les en tâches
+                  techniques plus petites et réalisables.
+                  <span>
+                    Cela te permet d'aborder chaque fonctionnalité par étapes
+                  </span>
+                  , sans te sentir submergé. Chaque tâche doit être réalisable
+                  en 2 à 4 heures pour garder un bon rythme.
+                </p>
+                <div class="content_sectionHeading d-flex">
+                  <h4>Exemple</h4>
+                  <span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                  </span>
+                </div>
+                <div class="content_sectionWrapper">
+                  <h5>User Story 1 : Créer un compte</h5>
+                  <dl>
+                    <dt>Tâche 1</dt>
+                    <dd>
+                      Créer la base de données pour stocker les informations
+                      utilisateur.
+                    </dd>
+
+                    <dt>Tâche 2</dt>
+                    <dd>
+                      Développer le formulaire d'inscription avec validation.
+                    </dd>
+
+                    <dt>Tâche 3</dt>
+                    <dd>
+                      Implémenter la logique de création de compte dans le
+                      backend (enregistrement des données).
+                    </dd>
+
+                    <dt>Tâche 4</dt>
+                    <dd>
+                      Configurer le système d'envoi d'e-mails de confirmation
+                      après l'inscription.
+                    </dd>
+                  </dl>
+
+                  <h5>User Story 2 : Connexion au compte</h5>
+                  <dl>
+                    <dt>Tâche 1</dt>
+                    <dd>Créer la page de connexion avec un formulaire.</dd>
+
+                    <dt>Tâche 2</dt>
+                    <dd>
+                      Mettre en place l'authentification des utilisateurs avec
+                      validation des identifiants.
+                    </dd>
+
+                    <dt>Tâche 3</dt>
+                    <dd>
+                      Gérer la session utilisateur pour maintenir la connexion.
+                    </dd>
+
+                    <dt>Tâche 4</dt>
+                    <dd>
+                      Ajouter la fonctionnalité de réinitialisation de mot de
+                      passe.
+                    </dd>
+                  </dl>
+
+                  <h5>User Story 3 : Liste d'articles préférés</h5>
+                  <dl>
+                    <dt>Tâche 1</dt>
+                    <dd>
+                      Créer une table dans la base de données pour gérer la
+                      liste d'articles préférés.
+                    </dd>
+
+                    <dt>Tâche 2</dt>
+                    <dd>
+                      Développer une interface pour afficher les articles
+                      favoris.
+                    </dd>
+
+                    <dt>Tâche 3</dt>
+                    <dd>
+                      Intégrer la fonctionnalité d'ajout/suppression d'articles
+                      dans la liste.
+                    </dd>
+                  </dl>
+
+                  <h5>User Story 4 : Ajouter un article à la liste</h5>
+                  <dl>
+                    <dt>Tâche 1</dt>
+                    <dd>
+                      Développer un bouton "Ajouter aux favoris" sur les
+                      articles.
+                    </dd>
+
+                    <dt>Tâche 2</dt>
+                    <dd>
+                      Créer une logique backend pour gérer l'ajout des articles
+                      à la liste de l'utilisateur.
+                    </dd>
+
+                    <dt>Tâche 3</dt>
+                    <dd>
+                      Afficher une notification ou un message de confirmation
+                      après l'ajout.
+                    </dd>
+                  </dl>
+
+                  <h5>User Story 5 : Modifier les informations de profil</h5>
+                  <dl>
+                    <dt>Tâche 1</dt>
+                    <dd>
+                      Créer une page pour modifier les informations de profil.
+                    </dd>
+
+                    <dt>Tâche 2</dt>
+                    <dd>
+                      Valider les données utilisateur (nom, e-mail, etc.) avant
+                      de les sauvegarder.
+                    </dd>
+
+                    <dt>Tâche 3</dt>
+                    <dd>
+                      Mettre à jour les informations dans la base de données.
+                    </dd>
+                  </dl>
+
+                  <h5>User Story 6 : Recevoir des notifications</h5>
+                  <dl>
+                    <dt>Tâche 1</dt>
+                    <dd>
+                      Mettre en place une logique pour détecter la publication
+                      d'articles correspondant aux intérêts de l'utilisateur.
+                    </dd>
+
+                    <dt>Tâche 2</dt>
+                    <dd>
+                      Implémenter un système de notification par e-mail ou via
+                      l'application.
+                    </dd>
+
+                    <dt>Tâche 3</dt>
+                    <dd>
+                      Ajouter une option dans le profil pour gérer les
+                      préférences de notification.
+                    </dd>
+                  </dl>
+
+                  <h5>
+                    User Story 7 : Gérer les utilisateurs (Administrateur)
+                  </h5>
+                  <dl>
+                    <dt>Tâche 1</dt>
+                    <dd>
+                      Créer un panneau d'administration pour lister les
+                      utilisateurs.
+                    </dd>
+
+                    <dt>Tâche 2</dt>
+                    <dd>
+                      Ajouter les fonctionnalités d'ajout, modification, et
+                      suppression d'utilisateurs.
+                    </dd>
+
+                    <dt>Tâche 3</dt>
+                    <dd>
+                      Implémenter des contrôles de sécurité pour les actions
+                      d'administration.
+                    </dd>
+                  </dl>
+                  <p>
+                    Pour conclure, après avoir identifié les
+                    <span>user stories</span>
+                    ,il est important de les
+                    <span>décomposer en tâches concrètes et réalisables</span>
+                    . Cela permet de transformer chaque besoin en actions
+                    spécifiques et mesurables. En découpant les user stories en
+                    petites tâches,
+                    <span>
+                      tu facilites l'avancement régulier du projet, tout en
+                      évitant la surcharge de travail
+                    </span>
+                    .
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h3>Sprint planning</h3>
+                <p>
+                  Plutôt que de te fixer de grands objectifs,
+                  <span>planifie des sprints courts</span>
+                  (1 à 2 semaines). À la fin de chaque sprint, tu devrais avoir
+                  une version fonctionnelle du projet, même si elle est
+                  minimale. Cela te permet de rester motivé en voyant des
+                  résultats concrets à la fin de chaque cycle.
+                </p>
+                <div class="content_sectionHeading d-flex">
+                  <h4>Exemple</h4>
+                  <span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </span>
+                </div>
+                <div class="content_sectionWrapper">
+                  <h5>
+                    Sprint 1 : Création de compte utilisateur (2 semaines)
+                  </h5>
+                  <ol>
+                    <li>
+                      <span>Objectif :</span>
+                      Permettre à l'utilisateur de créer un compte sur
+                      l'application.
+                    </li>
+                    <li>
+                      <span>User Stories :</span>
+                      <ul>
+                        <li>
+                          En tant qu'utilisateur, je veux pouvoir créer un
+                          compte afin de sauvegarder mes préférences et mes
+                          données personnelles.
+                        </li>
+                        <li>
+                          En tant qu'utilisateur, je veux recevoir un e-mail de
+                          confirmation après la création de mon compte.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span>Tâches :</span>
+                      <ul>
+                        <li>
+                          Créer le formulaire d'inscription avec les champs
+                          nécessaires (nom, e-mail, mot de passe).
+                        </li>
+                        <li>
+                          Valider les données du formulaire côté front-end
+                          (JavaScript).
+                        </li>
+                        <li>
+                          Intégrer la validation des données côté back-end (PHP
+                          ou autre).
+                        </li>
+                        <li>
+                          Configurer l'envoi d'e-mails pour la confirmation
+                          d'inscription.
+                        </li>
+                        <li>
+                          Tester l'inscription sur plusieurs appareils pour
+                          vérifier l'ergonomie et les performances.
+                        </li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <p>
+                    La durée d’un sprint planning peut
+                    <span>varier considérablement</span>
+                    en fonction de plusieurs facteurs, notamment l'
+                    <span>expérience</span>
+                    du développeur et la charge de travail du projet. Un
+                    développeur expérimenté pourra estimer plus précisément la
+                    durée des tâches et anticiper les défis techniques, tandis
+                    qu'un développeur moins expérimenté pourrait sous-estimer ou
+                    surestimer certaines étapes. De même, des projets complexes
+                    ou une charge de travail élevée peuvent allonger la durée
+                    des sprints. Pour permettre une meilleure gestion du temps
+                    et des ressources, Il est donc crucial d'adapter la
+                    planification en fonction de
+                    <span>ces éléments</span>
+                    pour assurer le bon déroulement du projet.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h3>Utiliser un tableau Kanban</h3>
+                <p>
+                  Utilise un tableau Kanban pour visualiser l’avancement de tes
+                  tâches. Divise-le en colonnes comme "À faire", "En cours", et
+                  "Terminé" afin de suivre chaque étape du sprint. C'est un
+                  outil simple mais efficace pour gérer ton travail en solo.
+                </p>
+                <div class="content_sectionHeading d-flex">
+                  <h4>Exemple</h4>
+                  <span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                  </span>
+                </div>
+                <div class="content_sectionWrapper">
+                  <p>
+                    Pour une gestion efficace des tâches avec la méthodologie
+                    Agile, voici quelques outils utiles :
+                  </p>
+
+                  <dl>
+                    <dt>
+                      <a
+                        href="https://trello.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Trello
+                      </a>
+                    </dt>
+                    <dd>
+                      Un outil de gestion de projet simple qui utilise des
+                      tableaux Kanban pour organiser les tâches.
+                    </dd>
+
+                    <dt>
+                      <a
+                        href="https://www.atlassian.com/software/jira"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Jira
+                      </a>
+                    </dt>
+                    <dd>
+                      Un outil puissant pour la gestion de projets Agile,
+                      utilisé pour créer des tableaux Kanban et gérer les
+                      sprints.
+                    </dd>
+                  </dl>
+                </div>
+              </li>
+            </ol>
+            <p>
+              Cette approche te permet de suivre la méthodologie Agile, même en
+              travaillant seul, en gardant un flux de travail organisé et en
+              t'adaptant au fur et à mesure du développement.
+            </p>
+          </div>
+        </section>
+
+        <section id="bonnePratique">
+          <!-- Points Important pour la gestion de projet -->
+          <div class="content_sectionHeading d-flex">
+            <h2>Meilleures Pratiques de Développement</h2>
+            <span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </span>
+          </div>
+          <div class="content_sectionWrapper">
+            <p>
+              Pour garantir l'efficacité et la qualité de ton projet Agile, il
+              est important de suivre certaines bonnes pratiques :
+            </p>
+            <h3>La méthode Pomodoro pour une meilleure gestion du temps</h3>
+            <p>
+              La méthode
+              <strong>Pomodoro</strong>
+              est une technique efficace pour améliorer la
+              <span>gestion du temps</span>
+              et la productivité, particulièrement dans un environnement de
+              travail Agile. En alternant des périodes de travail de 25 minutes
+              avec des pauses de 5 minutes, elle permet de
+              <span>maintenir une concentration</span>
+              élevée tout en évitant l'
+              <span>épuisement mental</span>
+              . Cette approche favorise une gestion du temps structurée, te
+              permettant de te concentrer sur tes tâches tout en te donnant
+              l'occasion de te ressourcer. En intégrant cette méthode à ta
+              routine de développement, tu pourras mieux gérer ton backlog et
+              avancer de manière plus organisée dans la réalisation de tes user
+              stories.
+            </p>
+            <h3>Rester concentré sur le plan initial</h3>
+            <p>
+              Il est facile, lorsque l'on travaille seul, d'être tenté d'ajouter
+              ou de modifier des fonctionnalités pour des raisons esthétiques ou
+              pour explorer de nouvelles idées. Cela peut conduire à une
+              <span>perte de temps considérable</span>
+              , car il est courant de passer une heure ou plus à repenser un
+              design qui n'en valait pas la peine. Pour éviter cela, il est
+              conseillé de
+              <span>
+                noter ces nouvelles idées à part sans les intégrer immédiatement
+              </span>
+              , sauf si elles sont essentielles et ont été omises au départ. À
+              la fin du projet, tu pourrais réaliser que certaines de ces idées
+              ne sont finalement pas nécessaires. Rester fidèle à ton plan
+              initial t'aidera à maintenir une bonne cadence de travail et à
+              <span>respecter les délais</span>
+              .
+            </p>
+            <h3>Minimiser les distractions pour optimiser la productivité</h3>
+            <p>
+              Pour maximiser ta productivité, il est crucial de minimiser les
+              distractions pendant les périodes de travail. Évite de faire
+              plusieurs choses en même temps, comme regarder un film ou naviguer
+              sur les réseaux sociaux tout en travaillant, car cela peut
+              considérablement diminuer ta concentration et allonger le temps
+              nécessaire pour accomplir tes tâches. Il est également recommandé
+              de fermer tous les onglets de navigateur non liés à ton projet,
+              afin de créer un environnement de travail propre et focalisé. En
+              te concentrant sur une seule tâche à la fois et en éliminant les
+              distractions, tu seras en mesure de travailler de manière plus
+              efficace et de respecter tes délais.
+            </p>
+            <h3>Planifier la structure avant de coder</h3>
+            <p>
+              Avant de commencer à coder, il est crucial de
+              <span>structurer la page et d'analyser la maquette</span>
+              . Cela te permet de mieux comprendre la disposition et
+              d'identifier les classes ou les composants réutilisables, ce qui
+              est particulièrement utile pour le
+              <span>design responsive</span>
+              . En examinant l'ensemble des maquettes avant l'implémentation, tu
+              peux repérer quels éléments doivent être regroupés et
+              <span>éviter de dupliquer le code</span>
+              . Cette approche facilite également les ajustements pour
+              différents appareils et assure que le design reste cohérent et
+              fluide sur tous les écrans.
+            </p>
+            <h3>Mettre en place un outil de veille pour le projet</h3>
+            <p>
+              Il est utile de mettre en place un outil de veille pour
+              <span>
+                regrouper toutes les ressources du projet dans un espace de
+                travail unique
+              </span>
+              . Cela peut inclure des blogs, des composants, des cours, ou des
+              extraits de code. Un tel outil t'aidera à rester organisé, à
+              centraliser les informations essentielles et à
+              <span>
+                suivre les avancées technologiques en rapport avec ton projet
+              </span>
+              . Par exemple, tu peux utiliser
+              <a href="https://padlet.com" target="_blank">Padlet</a>
+              comme espace collaboratif pour regrouper ces ressources et les
+              visualiser facilement.
+            </p>
+            <h3>Centraliser toutes les ressources de gestion du projet</h3>
+            <p>
+              Une fois que toutes les maquettes, le backlog, les user stories,
+              les tâches, et autres outils de gestion de projet sont finalisés,
+              il est essentiel de centraliser toutes ces informations dans un
+              espace unique. Cela garantit un suivi clair, accessible et
+              organisé de l'ensemble du projet. Voici ce que cet espace pourrait
+              inclure :
+            </p>
+            <ul>
+              <li>
+                <strong>Maquettes</strong>
+                : Accéder aux maquettes du projet.
+              </li>
+              <li>
+                <strong>Backlog</strong>
+                : Consulter le backlog avec toutes les fonctionnalités
+                priorisées.
+              </li>
+              <li>
+                <strong>User Stories</strong>
+                : Voir les user stories définissant les besoins utilisateurs.
+              </li>
+              <li>
+                <strong>Tâches</strong>
+                : Suivre les tâches actuelles et à venir.
+              </li>
+              <li>
+                <strong>Tableau Kanban</strong>
+                : Utiliser un tableau pour visualiser la progression.
+              </li>
+              <li>
+                <strong>Planning de Sprint</strong>
+                : Accéder au planning des sprints pour suivre les itérations.
+              </li>
+              <li>
+                <strong>Outil de veille</strong>
+                : Regrouper les ressources du projet, comme des blogs,
+                composants ou tutoriels.
+              </li>
+              <li>
+                <strong>Nouvelles idées</strong>
+                : Noter toutes les idées ou fonctionnalités futures.
+              </li>
+            </ul>
+            <p>
+              Pour centraliser toutes tes ressources, utilise un outil comme
+              <a
+                href="https://www.notion.so/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Notion
+              </a>
+              . Cet outil te permet de rassembler tous tes documents et liens
+              essentiels dans un seul espace de travail, facilitant ainsi la
+              gestion de ton projet.
+            </p>
+          </div>
+        </section>
+        <section id="conclusion">
+          <div class="content_sectionHeading d-flex">
+            <h2>Conclusion</h2>
+            <span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </span>
+          </div>
+          <div class="content_sectionWrapper">
+            <p>
+              En conclusion, la planification et la gestion d'un projet en mode
+              Agile, que ce soit en solo ou en équipe, reposent sur une approche
+              itérative et flexible. En définissant un backlog détaillé et en
+              créant des user stories claires, tu peux organiser ton travail de
+              manière efficace. Découper les tâches en étapes plus petites
+              permet de rendre les objectifs plus atteignables et d'éviter la
+              surcharge. En utilisant des outils comme le tableau Kanban pour
+              visualiser la progression, chaque sprint devient une opportunité
+              d'améliorer le produit tout en restant concentré sur les
+              priorités. Cette méthode garantit une gestion proactive et
+              adaptable, même dans un projet complexe comme la création d'une
+              application fullstack.
+            </p>
+          </div>
+        </section>
       </article>
+      <!-- inclure des photo pour le backlog, user stories , taches, tableau kanban , outils de veilles -->
     </main>
     <footer></footer>
     <script
@@ -89,6 +1072,6 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- <script src="./src/js/blog.js"></script> -->
+    <script src="./src/js/blog.js"></script>
   </body>
 </html>

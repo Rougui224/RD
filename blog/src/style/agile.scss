@@ -1,0 +1,76 @@
+@import "./../../../src/style/config";
+@import "./../../../src/style/animations";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 10px 0;
+
+  h3 {
+    color: $primary-color;
+  }
+  h4 {
+    color: $primary-color-darkend;
+  }
+}
+
+dl {
+  margin-left: 25px;
+  //   dt,
+  //   dd {
+  //     display: inline;
+  //   }
+}
+.content_sectionHeading {
+  justify-content: space-between;
+  gap: 10px;
+  i {
+    transition: transform 500ms ease;
+    cursor: pointer;
+    &.rotate {
+      transform: rotate(90deg);
+    }
+  }
+}
+.content_methodologieAgile {
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  li {
+    div {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    i,
+    h4 {
+      font-size: 18px;
+    }
+    ul {
+      margin-bottom: 16px;
+    }
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+.content_sectionWrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 500ms ease;
+  &.open {
+    max-height: 29860px;
+  }
+}

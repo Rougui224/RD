@@ -62,3 +62,20 @@ window.addEventListener("resize", function () {
     enableScrollHeader = true;
   }
 });
+
+// **************Collapse****************
+$(".content_sectionHeading span").on("click", function () {
+  // Trouve le parent .content_sectionHeading du span cliqué
+  const $parent = $(this).closest(".content_sectionHeading");
+  // Trouve le wrapper voisin suivant
+  const $wrapper = $parent.next(".content_sectionWrapper");
+  console.log($parent);
+  console.log($wrapper);
+  if ($wrapper.hasClass("open")) {
+    $wrapper.removeClass("open");
+    $parent.find("i").removeClass("rotate");
+  } else {
+    $wrapper.addClass("open");
+    $parent.find("i").addClass("rotate");
+  }
+});

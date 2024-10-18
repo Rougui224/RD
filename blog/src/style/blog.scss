@@ -4,18 +4,25 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  position: relative;
+}
 /* Styles généraux */
 body {
   font-family: "Arial", sans-serif;
   color: $tertiary-color-darkend;
   background: $secondary-color;
-  margin: 0;
+
   padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 main {
   justify-content: flex-end;
   padding-right: 150px;
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
 }
 header {
   background-color: $bg-header;
@@ -69,6 +76,13 @@ nav.navbar {
   // padding: 20px;
 
   border-radius: 10px;
+  &_sectionHeading {
+    align-items: center;
+    border-bottom: 2px solid $border;
+    i {
+      font-size: 23px;
+    }
+  }
 }
 .performance {
   display: flex;
@@ -249,6 +263,12 @@ code {
     color: $primary-color;
   }
 }
+
+@media all and (min-width: 1440px) {
+  nav.navbar {
+    left: calc((100vw - 1440px) / 2 + 20px);
+  }
+}
 @media all and (max-width: 1370px) {
   .nav-link span {
     display: none;
@@ -313,7 +333,7 @@ code {
     }
   }
   .card a {
-    font-size: 10px;
+    font-size: 10px !important;
     text-align: center;
   }
   main {
@@ -326,6 +346,9 @@ code {
     font-size: 15px;
   }
   p,
+  h4,
+  h5,
+  i,
   a,
   dd,
   li,
@@ -333,7 +356,7 @@ code {
   span,
   strong,
   code {
-    font-size: 14px;
+    font-size: 14px !important;
   }
   .nav-link span {
     display: none;
